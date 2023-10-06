@@ -28,7 +28,7 @@ const client = new Client({
 
 client.login(token);
 
-client.on("guildMessageCreate", async (msg) => {
+client.on("messageCreate", async (msg) => {
   console.log("CRE");
   console.log(msg);
 });
