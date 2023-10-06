@@ -35,10 +35,11 @@ const client = new Client({
 client.login(token);
 
 client.on("messageCreate", async (m) => {
+  console.log(m);
   let msg = m.Content;
   let query = m.Query;
 
-  if (msg.toLowerCase().includes("remind "))
+  if (msg !== null && msg.toLowerCase().includes("remind "))
   {
     let timerAtMatch = msg.match(TimerOnRegex);
     let timerAt2Match = msg.match(TimerOn2Regex);
