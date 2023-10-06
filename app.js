@@ -7,9 +7,7 @@ import {
 import { VerifyDiscordRequest } from "./utils.js";
 import {
   Client,
-  GatewayIntentBits,
-  GuildScheduledEventManager,
-  CDN
+  GatewayIntentBits
 } from "discord.js";
 
 // Create an express app
@@ -32,7 +30,7 @@ client.login(token);
 
 client.on("guildMessageCreate", async (msg) => {
   console.log("CRE");
-  console.log(m);
+  console.log(msg);
 });
 
 app.post("/interactions", async function (req, res) {
